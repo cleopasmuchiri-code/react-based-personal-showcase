@@ -36,7 +36,7 @@ const Form = ({ addProduct }) => {
       <input onChange={handleChange} type="text" name="price" />
       <input onChange={handleChange} type="text" name="stockCount" />
       <input onChange={handleChange} type="text" name="rating" />
-      <textarea name="description"></textarea>
+      <textarea onChange={handleChange} name="description"></textarea>
     </form>
   );
 };
