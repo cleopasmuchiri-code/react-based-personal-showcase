@@ -23,25 +23,6 @@
   ],
   "products": [
     {
-      "id": "car-101",
-      "categoryId": "hypercars",
-      "name": "Chiron Super Sport",
-      "brand": "Bugatti",
-      "year": 2025,
-      "price": 3820000,
-      "inStock": true,
-      "stockCount": 1,
-      "rating": 5.0,
-      "description": "An absolute masterpiece of automotive engineering powered by a quad-turbo W16 engine delivering effortless 270+ mph performance.",
-      "image": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a",
-      "specs": {
-        "engine": "8.0L Quad-Turbo W16",
-        "horsepower": "1,578 hp",
-        "zeroToSixty": "2.2 s",
-        "topSpeed": "273 mph"
-      }
-    },
-    {
       "id": "car-102",
       "categoryId": "supercars",
       "name": "SF90 Stradale",
@@ -99,42 +80,34 @@
       }
     },
     {
-      "id": "car-105",
-      "categoryId": "performance-suvs",
-      "name": "Urus Performante",
+      "name": "Urus Perfor",
       "brand": "Lamborghini",
       "year": 2025,
       "price": 269800,
-      "inStock": false,
-      "stockCount": 0,
+      "stockCount": "",
       "rating": 4.7,
       "description": "Lightweight, lowered, and sharpened variant of the Super SUV featuring carbon fiber bodywork and rally-tuned driving dynamics.",
-      "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c",
-      "specs": {
-        "engine": "4.0L Twin-Turbo V8",
-        "horsepower": "657 hp",
-        "zeroToSixty": "3.3 s",
-        "topSpeed": "190 mph"
-      }
+      "id": "car-105"
     },
     {
-      "id": "car-106",
-      "categoryId": "supercars",
-      "name": "750S Spider",
-      "brand": "McLaren",
-      "year": 2025,
+      "name": "Ken",
+      "brand": "Lambo",
+      "year": "2020",
       "price": 345000,
-      "inStock": true,
       "stockCount": 2,
       "rating": 4.8,
       "description": "Ultra-lightweight open-top supercar offering razor-sharp steering precision and relentless twin-turbo V8 acceleration.",
-      "image": "https://images.unsplash.com/photo-1621135802920-133df287f89c",
-      "specs": {
-        "engine": "4.0L Twin-Turbo V8",
-        "horsepower": "740 hp",
-        "zeroToSixty": "2.7 s",
-        "topSpeed": "206 mph"
-      }
+      "id": "car-106"
+    },
+    {
+      "name": "vitz",
+      "brand": "toyota",
+      "year": "2002",
+      "price": "200",
+      "stockCount": "100",
+      "rating": "0.5",
+      "description": "waaaaah",
+      "id": "Z2oAX9l"
     }
   ],
   "inquiries": []

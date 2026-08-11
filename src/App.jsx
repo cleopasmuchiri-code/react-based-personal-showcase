@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductPage from "./components/ProductPage";
 import Form from "./components/Form";
 
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [errors, setErrors] = useState(false);
   const [loading, setLoading] = useState(true);
 
   // fetch function from db.json
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setErrors(false);
     setLoading(true);
 
@@ -50,6 +50,18 @@ const App = () => {
     setProducts(products.filter((product) => product.id !== id));
   }
 
+  // select item to update
+
+  function selectProduct(selectedProductId) {
+    const selectedItem = products.find(
+      (product) => product.id === selectedProductId,
+    );
+
+    setSelectedProduct({ ...selectedItem });
+
+    console.log("Selected Product is: ", selectedProduct);
+  }
+
   // called after successful product update
   function updateProduct(updateProduct) {
     setProducts(
@@ -57,12 +69,24 @@ const App = () => {
         product.id === updateProduct.id ? updateProduct : product,
       ),
     );
+
+    setSelectedProduct(null);
   }
 
   return (
     <>
-      <ProductPage products={products} errors={errors} loading={loading} />
-      <Form addProduct={addProduct} />
+      <ProductPage
+        products={products}
+        errors={errors}
+        loading={loading}
+        selectProduct={selectProduct}
+        deleteProduct={deleteProduct}
+      />
+      <Form
+        addProduct={addProduct}
+        selectedProduct={selectedProduct}
+        updateProduct={updateProduct}
+      />
     </>
   );
 };

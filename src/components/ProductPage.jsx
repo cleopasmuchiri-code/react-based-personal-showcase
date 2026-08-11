@@ -1,6 +1,16 @@
-import React from "react";
+const ProductPage = ({
+  products,
+  errors,
+  loading,
+  selectProduct,
+  deleteProduct,
+}) => {
+  function handleDelete(productId) {
+    fetch(`http://localhost:3000/products/${productId}`, {
+      method: "DELETE",
+    }).then(() => deleteProduct(productId));
+  }
 
-const ProductPage = ({ products, errors, loading }) => {
   if (loading) {
     return <div>Loading Products</div>;
   }
@@ -31,6 +41,20 @@ const ProductPage = ({ products, errors, loading }) => {
               <p>{spec}</p>
             </div>
           ))} */}
+
+          <button
+            className="cursor-pointer bg-green-500 p-8 mt-4"
+            onClick={() => selectProduct(product.id)}
+          >
+            Edit Product
+          </button>
+
+          <button
+            className="cursor-pointer bg-red-500 p-8 mt-4"
+            onClick={() => handleDelete(product.id)}
+          >
+            Delete Product
+          </button>
         </div>
       ))}
     </div>
